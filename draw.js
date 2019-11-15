@@ -11,7 +11,7 @@ function on_text_change(){
   	ctx.fillStyle = "white";
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-	ctx.font = "500px LOGOTYPEJP_MP_B_1.1";
+	ctx.font = "500px ../coolwind0202/LOGOTYPEJP_MP_B_1.1.TTF";
 	ctx.fillStyle = "lime";
 	
 	ctx.scale(1/text_content.length,1);
