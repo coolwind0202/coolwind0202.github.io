@@ -11,12 +11,12 @@ function on_text_change(){
   	ctx.fillStyle = "white";
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-	ctx.font = "500px ../coolwind0202/LOGOTYPEJP_MP_B_1.1.TTF";
+	ctx.font = "1000px ../coolwind0202/LOGOTYPEJP_MP_B_1.1.TTF";
 	ctx.fillStyle = "lime";
 	
 	ctx.scale(1/text_content.length,1);
 	ctx.fillText(text_content, 0, 260);
-  ctx.restore();
+	ctx.restore();
 }
 
 function on_save_click(){
