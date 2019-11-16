@@ -6,16 +6,18 @@ function on_text_change(){
   	ctx.save();
   
 	let text_content = document.getElementById("text1").value;
-	console.log(text_content);
+  	let op = document.getElementById("opa").checked;
   
  	ctx.fillStyle = "white";
-	ctx.fillRect(0, 0, canvas.width, canvas.height);
+  
+  	if(op){
+		ctx.fillRect(0, 0, canvas.width, canvas.height);
+   	}
 
 	ctx.font = "bold 300px Noto Sans JP";
 	ctx.fillStyle = "lime";
   
-  let text_width = ctx.measureText(text_content);
-  console.log(text_width)
+  	let text_width = ctx.measureText(text_content);
 	
 	ctx.scale(1/(text_width.width/300),1);
 	ctx.fillText(text_content, 0, 260);
