@@ -8,13 +8,16 @@ function on_text_change(){
 	let text_content = document.getElementById("text1").value;
 	console.log(text_content);
   
-  	ctx.fillStyle = "white";
+ 	ctx.fillStyle = "white";
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-	ctx.font = "1000px ../coolwind0202/LOGOTYPEJP_MP_B_1.1.TTF";
+	ctx.font = "bold 300px Noto Sans JP";
 	ctx.fillStyle = "lime";
+  
+  let text_width = ctx.measureText(text_content);
+  console.log(text_width)
 	
-	ctx.scale(1/text_content.length,1);
+	ctx.scale(1/(text_width.width/300),1);
 	ctx.fillText(text_content, 0, 260);
 	ctx.restore();
 }
